@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		652B58871FCC4DD7002670EE /* OverlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B58861FCC4DD6002670EE /* OverlayerView.swift */; };
+		652B58891FCC4DE2002670EE /* OverlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652B58881FCC4DE2002670EE /* OverlayerView.xib */; };
+		652B58911FCC83CE002670EE /* SpiralityDrawingLanuch.png in Resources */ = {isa = PBXBuildFile; fileRef = 652B58901FCC83CE002670EE /* SpiralityDrawingLanuch.png */; };
+		652B58931FCF142D002670EE /* default_load.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 652B58921FCF142D002670EE /* default_load.jpeg */; };
+		659EB8C91FC5E41B009078AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659EB8C81FC5E41B009078AA /* AppDelegate.swift */; };
+		659EB8CB1FC5E41B009078AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659EB8CA1FC5E41B009078AA /* ViewController.swift */; };
+		659EB8CE1FC5E41B009078AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659EB8CC1FC5E41B009078AA /* Main.storyboard */; };
+		659EB8D01FC5E41B009078AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659EB8CF1FC5E41B009078AA /* Assets.xcassets */; };
+		659EB8D31FC5E41B009078AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659EB8D11FC5E41B009078AA /* LaunchScreen.storyboard */; };
+		659EB8DB1FC5E493009078AA /* SpiralityCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659EB8DA1FC5E493009078AA /* SpiralityCanvas.swift */; };
+		65EDBADE1FDB8B0F0064A565 /* SpiralityStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EDBADD1FDB8B0F0064A565 /* SpiralityStack.swift */; };
+		94505D4AB0C7E0CE2FA1FCBD /* Pods_Spirality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0032163B35E22A151E77B2 /* Pods_Spirality.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D0032163B35E22A151E77B2 /* Pods_Spirality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spirality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE38EDF58E444EAC7AC9C7A /* Pods-Spirality.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spirality.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spirality/Pods-Spirality.debug.xcconfig"; sourceTree = "<group>"; };
+		652B58861FCC4DD6002670EE /* OverlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayerView.swift; sourceTree = "<group>"; };
+		652B58881FCC4DE2002670EE /* OverlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayerView.xib; sourceTree = "<group>"; };
+		652B58901FCC83CE002670EE /* SpiralityDrawingLanuch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpiralityDrawingLanuch.png; sourceTree = "<group>"; };
+		652B58921FCF142D002670EE /* default_load.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_load.jpeg; sourceTree = "<group>"; };
+		659EB8C51FC5E41B009078AA /* Spirality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirality.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		659EB8C81FC5E41B009078AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		659EB8CA1FC5E41B009078AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		659EB8CD1FC5E41B009078AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		659EB8CF1FC5E41B009078AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		659EB8D21FC5E41B009078AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		659EB8D41FC5E41B009078AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659EB8DA1FC5E493009078AA /* SpiralityCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralityCanvas.swift; sourceTree = "<group>"; };
+		65EDBADD1FDB8B0F0064A565 /* SpiralityStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiralityStack.swift; sourceTree = "<group>"; };
+		84C0AECFFEB0DBDB8EFCD2FA /* Pods-Spirality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spirality.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spirality/Pods-Spirality.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		659EB8C21FC5E41B009078AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94505D4AB0C7E0CE2FA1FCBD /* Pods_Spirality.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		598077ED45F9D4973B3CA898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D0032163B35E22A151E77B2 /* Pods_Spirality.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		659EB8BC1FC5E41B009078AA = {
+			isa = PBXGroup;
+			children = (
+				659EB8C71FC5E41B009078AA /* Spirality */,
+				659EB8C61FC5E41B009078AA /* Products */,
+				E58DE6E89CF7F2D0B508A65B /* Pods */,
+				598077ED45F9D4973B3CA898 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		659EB8C61FC5E41B009078AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				659EB8C51FC5E41B009078AA /* Spirality.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		659EB8C71FC5E41B009078AA /* Spirality */ = {
+			isa = PBXGroup;
+			children = (
+				659EB8C81FC5E41B009078AA /* AppDelegate.swift */,
+				659EB8CA1FC5E41B009078AA /* ViewController.swift */,
+				659EB8DA1FC5E493009078AA /* SpiralityCanvas.swift */,
+				65EDBADD1FDB8B0F0064A565 /* SpiralityStack.swift */,
+				652B58861FCC4DD6002670EE /* OverlayerView.swift */,
+				652B58881FCC4DE2002670EE /* OverlayerView.xib */,
+				659EB8CC1FC5E41B009078AA /* Main.storyboard */,
+				659EB8CF1FC5E41B009078AA /* Assets.xcassets */,
+				659EB8D11FC5E41B009078AA /* LaunchScreen.storyboard */,
+				659EB8D41FC5E41B009078AA /* Info.plist */,
+				652B58901FCC83CE002670EE /* SpiralityDrawingLanuch.png */,
+				652B58921FCF142D002670EE /* default_load.jpeg */,
+			);
+			path = Spirality;
+			sourceTree = "<group>";
+		};
+		E58DE6E89CF7F2D0B508A65B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AE38EDF58E444EAC7AC9C7A /* Pods-Spirality.debug.xcconfig */,
+				84C0AECFFEB0DBDB8EFCD2FA /* Pods-Spirality.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		659EB8C41FC5E41B009078AA /* Spirality */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659EB8D71FC5E41B009078AA /* Build configuration list for PBXNativeTarget "Spirality" */;
+			buildPhases = (
+				E09480BD8387778F60E3FD66 /* [CP] Check Pods Manifest.lock */,
+				659EB8C11FC5E41B009078AA /* Sources */,
+				659EB8C21FC5E41B009078AA /* Frameworks */,
+				659EB8C31FC5E41B009078AA /* Resources */,
+				C2F8E25C1EF1F354BAC09B71 /* [CP] Embed Pods Frameworks */,
+				34E826EB7A68CB755B9BCF32 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spirality;
+			productName = Spirality;
+			productReference = 659EB8C51FC5E41B009078AA /* Spirality.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		659EB8BD1FC5E41B009078AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Daniel;
+				TargetAttributes = {
+					659EB8C41FC5E41B009078AA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 659EB8C01FC5E41B009078AA /* Build configuration list for PBXProject "Spirality" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 659EB8BC1FC5E41B009078AA;
+			productRefGroup = 659EB8C61FC5E41B009078AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				659EB8C41FC5E41B009078AA /* Spirality */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		659EB8C31FC5E41B009078AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659EB8D31FC5E41B009078AA /* LaunchScreen.storyboard in Resources */,
+				652B58911FCC83CE002670EE /* SpiralityDrawingLanuch.png in Resources */,
+				659EB8D01FC5E41B009078AA /* Assets.xcassets in Resources */,
+				659EB8CE1FC5E41B009078AA /* Main.storyboard in Resources */,
+				652B58891FCC4DE2002670EE /* OverlayerView.xib in Resources */,
+				652B58931FCF142D002670EE /* default_load.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E826EB7A68CB755B9BCF32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spirality/Pods-Spirality-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F8E25C1EF1F354BAC09B71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Spirality/Pods-Spirality-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spirality/Pods-Spirality-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E09480BD8387778F60E3FD66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spirality-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		659EB8C11FC5E41B009078AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659EB8CB1FC5E41B009078AA /* ViewController.swift in Sources */,
+				659EB8C91FC5E41B009078AA /* AppDelegate.swift in Sources */,
+				65EDBADE1FDB8B0F0064A565 /* SpiralityStack.swift in Sources */,
+				652B58871FCC4DD7002670EE /* OverlayerView.swift in Sources */,
+				659EB8DB1FC5E493009078AA /* SpiralityCanvas.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		659EB8CC1FC5E41B009078AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				659EB8CD1FC5E41B009078AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		659EB8D11FC5E41B009078AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				659EB8D21FC5E41B009078AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		659EB8D51FC5E41B009078AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		659EB8D61FC5E41B009078AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		659EB8D81FC5E41B009078AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AE38EDF58E444EAC7AC9C7A /* Pods-Spirality.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pan Jun (34768TZSZ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pan Jun (34768TZSZ3)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 34768TZSZ3;
+				INFOPLIST_FILE = Spirality/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhipingyang.Spirality;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cfe3475e-51ee-44d9-8788-57deda3112ae";
+				PROVISIONING_PROFILE_SPECIFIER = Spirality.Profile;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		659EB8D91FC5E41B009078AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84C0AECFFEB0DBDB8EFCD2FA /* Pods-Spirality.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pan Jun (34768TZSZ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pan Jun (34768TZSZ3)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 34768TZSZ3;
+				INFOPLIST_FILE = Spirality/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhipingyang.Spirality;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cfe3475e-51ee-44d9-8788-57deda3112ae";
+				PROVISIONING_PROFILE_SPECIFIER = Spirality.Profile;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		659EB8C01FC5E41B009078AA /* Build configuration list for PBXProject "Spirality" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659EB8D51FC5E41B009078AA /* Debug */,
+				659EB8D61FC5E41B009078AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659EB8D71FC5E41B009078AA /* Build configuration list for PBXNativeTarget "Spirality" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659EB8D81FC5E41B009078AA /* Debug */,
+				659EB8D91FC5E41B009078AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 659EB8BD1FC5E41B009078AA /* Project object */;
+}
