@@ -1,0 +1,8 @@
+<view class="stv-container">
+  <canvas id="canvas" canvas-id="firstCanvas"></canvas>
+  <view class='tool'>
+    <block wx:for="{{['picker','circle','pen','recyclebin','arrow_left_dis','arrow_right_dis','save','time']}}">
+      <image class='tool-item' src="../image/{{item}}.png" alrt="image"></image>
+    </block>
+  </view>
+</view>
