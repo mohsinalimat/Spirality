@@ -21,20 +21,18 @@ Page({
     console.log(this);
   },
 
-
+  // 绘图事件
   touchstart(e) {
     if (e.touches.length > 1) { return; }
     
     let { clientX, clientY } = e.touches[0];
     this.prePointX = clientX;
     this.prePointY = clientY;
-    this.context = wx.createCanvasContext("firstCanvas")
+    if (!this.context) {
+      this.context = wx.createCanvasContext("firstCanvas", this)
+      this.context.setLineWidth(1)
+    }
     this.context.setStrokeStyle(this.data.color)
-    this.context.setLineWidth(1)
-    this.context.setLineCap('round')
-
-    this.convertPointByCenterOfPoint(clientX, clientY, 1);
-    // console.log(newX, newY);
   },
   touchmove(e) {
     if (e.touches.length > 1) { 
@@ -60,12 +58,12 @@ Page({
     this.prePointX = clientX;
     this.prePointY = clientY;
     
+    let actions = this.context.getActions();
     // 实时渲染
-    let context = this.context;
     wx.drawCanvas({
       canvasId: "firstCanvas",
       reserve: true,
-      actions: context.getActions()
+      actions: actions
     })
   },
   touchend(e) {
@@ -74,6 +72,8 @@ Page({
     })
   },
   touchcancel(e) {
+    this.context.clearActions();
+
     this.setData({
       isShowTool: true
     })
@@ -87,6 +87,10 @@ Page({
   },
   // 画笔颜色
   triggerPicker(e) {
+    // 去掉counter
+    if (this.data.isShowCounter) {
+      this.setData({ isShowCounter: false })
+    }
     let isShowColorPicker = this.data.isShowColorPicker;
     this.setData({ isShowColorPicker: !isShowColorPicker })
   },
@@ -99,6 +103,10 @@ Page({
   },
   // 画笔阵列
   triggerCounter(e) {
+    // 去掉colorPicker
+    if (this.data.isShowColorPicker) {
+      this.setData({ isShowColorPicker: false })
+    }
     // 防止 input 点击触发隐藏
     if (e.target.id === "CountChangerInput") { return }
 
@@ -129,26 +137,50 @@ Page({
   },
   // 清楚画板
   clean(e){
-    console.log('clean', e)
-    if (this.context) {
-      this.context.clearRect(10, 10, 1000, 275)
-    }
+    this.dismissFocus()
+    wx.drawCanvas({
+      canvasId: "firstCanvas",
+      reserve: false,
+      actions: []
+    })
   },
   // 上一步
   rollBack(e) {
     console.log('rollBack', e)
+    this.dismissFocus()
   },
   // 下一步
   moveForward(e) {
     console.log('moveForward', e)
+    this.dismissFocus()
   },
   // 保存为图片
   save(e){
     console.log('save', e)
+    this.dismissFocus()
+
+    wx.canvasToTempFilePath({
+      canvasId: 'firstCanvas',
+      success(res) {
+        console.log(res.tempFilePath);
+        console.log(res);
+      }
+    }, this)
   },
   // 播放
   play(e){
     console.log('play', e)
+    this.dismissFocus()
+  },
+
+  dismissFocus(e){
+    console.log("dismissFocus");
+    if (this.data.isShowCounter || this.data.isShowColorPicker){
+      this.setData({
+        isShowCounter: false,
+        isShowColorPicker: false,
+      })
+    }
   },
 
   // 用触摸点坐标和第index阵列 获取阵列的坐标
@@ -156,7 +188,6 @@ Page({
     let centerX = this.windowWidth / 2.0;
     let centerY = this.windowHeight / 2.0;
     let increaseAngle = Math.PI * 2.0 * index / this.data.count;
-    console.log(centerX, centerY, pointX, pointY, index, increaseAngle);
     let radius = Math.sqrt((centerX - pointX) * (centerX - pointX) + (centerY - pointY) * (centerY - pointY))
     let angel = this.getAngleOnXAxisFromPoint(centerX, centerY, pointX, pointY) + increaseAngle;
     let resultX = Math.cos(angel) * radius + centerX;

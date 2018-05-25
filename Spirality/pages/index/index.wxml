@@ -15,11 +15,11 @@
 </wxs>
 
 <!-- 内容展示 -->
-<view class="stv-container" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel'>
-  <canvas id="drawCanvas" canvas-id="firstCanvas" style="z-index=-100;"></canvas>
+<view class="stv-container" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel' bindtap='dismissFocus'>
+  <canvas id="drawCanvas" canvas-id="firstCanvas" style="z-index=-100;"/>
   <view wx:if="{{isShowTool}}" class='tool'>
     <block wx:for="{{StaticData.image_names}}" wx:key='unique' wx:for-item="imageName">
-      <view bindtap="{{StaticData.bindtap_names[index]}}">
+      <view catchtap="{{StaticData.bindtap_names[index]}}">
         <image wx:if="{{index==2}}" class='tool-item' src="../image/{{imageName[isPen ? 0:1]}}.png" alrt="image"></image>
         <image wx:elif="{{index==4}}" class='tool-item' src="../image/{{imageName[isAblePre ? 0:1]}}.png" alrt="image"></image>
         <image wx:elif="{{index==5}}" class='tool-item' src="../image/{{imageName[isAbleNext ? 0:1]}}.png" alrt="image"></image>

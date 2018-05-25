@@ -74,18 +74,20 @@
   justify-content: center;
   background-color: white; 
   left: 100rpx;
-  top: 20rpx;
+  top: 10rpx;
   border-radius: 20rpx;
   overflow: hidden;
 }
 .count-changer>view {
-  font-size: 40rpx;
-  min-width: 60rpx;
+  font-size: 50rpx;
+  min-width: 80rpx;
   text-align: center;
   font: bold;
+  padding: 5rpx 5rpx 8rpx 5rpx;
   background-color: #ddd;
 }
 .count-changer>input {
   text-align: center;
-  min-width: 120rpx;
+  min-width: 100rpx;
+  height: 100%;
 }
