@@ -30,13 +30,13 @@
   width: 100%;
   padding-top: 20rpx;
   padding-bottom: 20rpx;
+  position: relative;
 }
 .tool>view:last-child {
   padding-bottom: 40rpx;
 }
 .tool>view:first-child {
   padding-top: 40rpx;
-  position: relative;
 }
 .tool-item {
   width: 50rpx;
@@ -49,13 +49,13 @@
 
 
 
-
+/* 颜色选择器 */
 .color-picker {
   display: flex;
   flex-direction: column;
   position: absolute;
   left: 80rpx;
-  top: 10rpx;
+  top: 0rpx;
 }
 .color-picker-row {
   display: flex;
@@ -64,4 +64,28 @@
   border: black 1rpx solid;
   width: 40rpx;
   height: 40rpx;
+}
+
+/* 阵列数修改器 */
+.count-changer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; 
+  left: 100rpx;
+  top: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.count-changer>view {
+  font-size: 40rpx;
+  min-width: 60rpx;
+  text-align: center;
+  font: bold;
+  background-color: #ddd;
+}
+.count-changer>input {
+  text-align: center;
+  min-width: 120rpx;
 }

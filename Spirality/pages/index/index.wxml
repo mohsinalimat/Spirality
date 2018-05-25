@@ -4,10 +4,13 @@
   // 图片
   var image_names = ['picker','circle',['pen','bucket'],'recyclebin',['left','arrow_left_dis'],['right','arrow_right_dis'],'save','time'];
   // 方法名
-  var bindtap_names = ['triggerPicker','countChange','penChange','clean','rollBack','moveForward','save','play'];
+  var bindtap_names = ['triggerPicker','triggerCounter','penChange','clean','rollBack','moveForward','save','play'];
+  var colors = [['#feeeed','#fedcbd','#dea32c','#f58220','#f3715c','#aa2116','#b4534b'],['#abc88b','#b2d235','#7fb80e','#1d953f','#005831','#225a1f','#27342b'],['#90d7ec','#33a3dc','#228fbd','#2468a2','#1b315e','#11264f','#293047'],['#afb4db','#9b95c9','#867892','#6950a1','#594c6d','#543044','#401c44']];
+
   module.exports = {
     image_names : image_names,
     bindtap_names : bindtap_names,
+    colors: colors
   }
 </wxs>
 
@@ -25,27 +28,29 @@
         <view wx:if="{{index==1}}" style="color:#aaa; font-size:20rpx;">{{count}}</view>
         <view wx:if="{{index==2}}" style="color:#bbb; font-size:20rpx;">{{isPen ? '钢笔':'水桶'}}</view>
         <template wx:if="{{index==0 && isShowColorPicker}}" is="ColorPicker"/>
+        <template wx:if="{{index==1 && isShowCounter}}" is="CountChanger" data="{{count:count}}"/>
       </view>
     </block>
   </view>
 </view>
 
 
-<!-- 静态数据 -->
-<wxs module="StaticColor">
-  // 图片
-  module.exports = {
-    colors : [['#feeeed','#fedcbd','#dea32c','#f58220','#f3715c','#aa2116','#b4534b'],['#abc88b','#b2d235','#7fb80e','#1d953f','#005831','#225a1f','#27342b'],['#90d7ec','#33a3dc','#228fbd','#2468a2','#1b315e','#11264f','#293047'],['#afb4db','#9b95c9','#867892','#6950a1','#594c6d','#543044','#401c44']]
-  }
-</wxs>
-
-<!-- 违章信息顶部item -->
+<!-- 颜色选择器 -->
 <template name="ColorPicker">
   <view class='color-picker'>
-    <view class='color-picker-row' wx:for="{{StaticColor.colors}}" wx:key='unique' wx:for-item="colorList">
+    <view class='color-picker-row' wx:for="{{StaticData.colors}}" wx:key='unique' wx:for-item="colorList">
       <block wx:for="{{colorList}}" wx:key='unique' wx:for-item="color">
         <view style='background-color:{{color}};' bindtap='colorChange' data-color="{{color}}"></view>
       </block>
     </view>
+  </view>
+</template>
+
+<!-- 阵列数量 -->
+<template name="CountChanger">
+  <view class='count-changer'>
+    <view catchtap='countReduce'>-</view>
+    <input id='CountChangerInput' value='{{count}}' type='number' confirm-type='done' bindinput="countChange"/>
+    <view catchtap='countPlus'>+</view>
   </view>
 </template>

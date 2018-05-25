@@ -10,6 +10,7 @@ Page({
     isAbleNext: true, // 可以使用下一步
     isShowTool: true, // 左边工具栏展示
     isShowColorPicker: false, // 颜色选择器
+    isShowCounter:false,
   },
   // contextArray:[],
   onLoad: function (options) {
@@ -67,24 +68,15 @@ Page({
   },
   // 画笔类型
   penChange: function (e) {
-    console.log('penchanged', e)
-
     let isPen = !this.data.isPen;
-    console.log(isPen);
-
-    this.setData({
-      isPen: isPen
-    })
-  },
-  triggerPicker(e) {
-    let isShowColorPicker = this.data.isShowColorPicker;
-    this.setData({
-      isShowColorPicker: !isShowColorPicker
-    })
+    this.setData({ isPen: isPen })
   },
   // 画笔颜色
+  triggerPicker(e) {
+    let isShowColorPicker = this.data.isShowColorPicker;
+    this.setData({ isShowColorPicker: !isShowColorPicker })
+  },
   colorChange(e) {
-    console.log('colorChange', e)
     let color = e.currentTarget.dataset.color;
     this.setData({
       color: color,
@@ -92,12 +84,33 @@ Page({
     })
   },
   // 画笔阵列
+  triggerCounter(e) {
+    // 防止 input 点击触发隐藏
+    if (e.target.id === "CountChangerInput") { return }
+
+    let isShowCounter = this.data.isShowCounter;
+    this.setData({
+      isShowCounter: !isShowCounter
+    })
+  },
   countChange(e){
-    console.log('countChange', e)
+    var count = Math.max(e.detail.value, 1)
+    count = Math.min(count, 100)
+    this.setData({
+      count: count
+    })
+  },
+  countPlus(e) {
 
     let count = this.data.count + 1;
     this.setData({
-      count: count
+      count: Math.min(count, 100)
+    })
+  },
+  countReduce(e) {
+    let count = this.data.count - 1;
+    this.setData({
+      count: Math.max(count,1)
     })
   },
   // 清楚画板
