@@ -3,11 +3,13 @@
 Page({
   data: {
     windowWidth: 0, 
-    color: 'red', // 画笔颜色
+    color: '#feeeed', // 画笔颜色
     count: 30,  // 阵列数量
     isPen: true,  // 是否使用钢笔
     isAblePre: true,  // 可以使用上一步
     isAbleNext: true, // 可以使用下一步
+    isShowTool: true, // 左边工具栏展示
+    isShowColorPicker: false, // 颜色选择器
   },
   // contextArray:[],
   onLoad: function (options) {
@@ -18,25 +20,25 @@ Page({
   },
   touchstart(e) {
     if (e.touches.length > 1) { return; }
-
+    
     let { clientX, clientY } = e.touches[0];
     this.prePointX = clientX;
     this.prePointY = clientY;
     this.context = wx.createCanvasContext("firstCanvas")
     this.context.setStrokeStyle(this.data.color)
-    this.context.setLineWidth(3)
+    this.context.setLineWidth(1)
     this.context.setLineCap('round')
-    this.context.moveTo(this.prePointX, this.prePointY)
-
-    console.log("1", this.prePointX, this.prePointY);
   },
   touchmove(e) {
     if (e.touches.length > 1) { 
       this.touchcancel()
       return; 
     }
-
-    console.log("2", this.prePointX, this.prePointY);
+    if (this.data.isShowTool) {
+      this.setData({
+        isShowTool: false
+      })
+    }
 
     let { clientX, clientY } = e.touches[0];
     this.context.moveTo(this.prePointX, this.prePointY)
@@ -45,8 +47,7 @@ Page({
     this.prePointX = clientX;
     this.prePointY = clientY;
     
-    console.log("3", this.prePointX, this.prePointY);
-
+    // 实时渲染
     let context = this.context;
     wx.drawCanvas({
       canvasId: "firstCanvas",
@@ -55,16 +56,14 @@ Page({
     })
   },
   touchend(e) {
-    // if (e.touches.length > 1) {
-    //   this.touchcancel()
-    //   return; 
-    // }
-    // this.context.stroke()
-    // this.context.draw()
+    this.setData({
+      isShowTool: true
+    })
   },
   touchcancel(e) {
-    // this.context.stroke()
-    // this.context.draw()
+    this.setData({
+      isShowTool: true
+    })
   },
   // 画笔类型
   penChange: function (e) {
@@ -77,13 +76,19 @@ Page({
       isPen: isPen
     })
   },
+  triggerPicker(e) {
+    let isShowColorPicker = this.data.isShowColorPicker;
+    this.setData({
+      isShowColorPicker: !isShowColorPicker
+    })
+  },
   // 画笔颜色
   colorChange(e) {
     console.log('colorChange', e)
-
-    let color = "green";
+    let color = e.currentTarget.dataset.color;
     this.setData({
-      color: color
+      color: color,
+      isShowColorPicker: false
     })
   },
   // 画笔阵列

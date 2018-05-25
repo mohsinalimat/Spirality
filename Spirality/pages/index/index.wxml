@@ -4,7 +4,7 @@
   // 图片
   var image_names = ['picker','circle',['pen','bucket'],'recyclebin',['left','arrow_left_dis'],['right','arrow_right_dis'],'save','time'];
   // 方法名
-  var bindtap_names = ['colorChange','countChange','penChange','clean','rollBack','moveForward','save','play'];
+  var bindtap_names = ['triggerPicker','countChange','penChange','clean','rollBack','moveForward','save','play'];
   module.exports = {
     image_names : image_names,
     bindtap_names : bindtap_names,
@@ -13,8 +13,8 @@
 
 <!-- 内容展示 -->
 <view class="stv-container" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel'>
-  <canvas id="canvas" canvas-id="firstCanvas"></canvas>
-  <view class='tool'>
+  <canvas id="canvas" canvas-id="firstCanvas" style="z-index=-100;"></canvas>
+  <view wx:if="{{isShowTool}}" class='tool'>
     <block wx:for="{{StaticData.image_names}}" wx:key='unique' wx:for-item="imageName">
       <view bindtap="{{StaticData.bindtap_names[index]}}">
         <image wx:if="{{index==2}}" class='tool-item' src="../image/{{imageName[isPen ? 0:1]}}.png" alrt="image"></image>
@@ -24,7 +24,28 @@
         <view wx:if="{{index==0}}" class='tool-item-bottom' style="background-color:{{color}};"></view>
         <view wx:if="{{index==1}}" style="color:#aaa; font-size:20rpx;">{{count}}</view>
         <view wx:if="{{index==2}}" style="color:#bbb; font-size:20rpx;">{{isPen ? '钢笔':'水桶'}}</view>
+        <template wx:if="{{index==0 && isShowColorPicker}}" is="ColorPicker"/>
       </view>
     </block>
   </view>
 </view>
+
+
+<!-- 静态数据 -->
+<wxs module="StaticColor">
+  // 图片
+  module.exports = {
+    colors : [['#feeeed','#fedcbd','#dea32c','#f58220','#f3715c','#aa2116','#b4534b'],['#abc88b','#b2d235','#7fb80e','#1d953f','#005831','#225a1f','#27342b'],['#90d7ec','#33a3dc','#228fbd','#2468a2','#1b315e','#11264f','#293047'],['#afb4db','#9b95c9','#867892','#6950a1','#594c6d','#543044','#401c44']]
+  }
+</wxs>
+
+<!-- 违章信息顶部item -->
+<template name="ColorPicker">
+  <view class='color-picker'>
+    <view class='color-picker-row' wx:for="{{StaticColor.colors}}" wx:key='unique' wx:for-item="colorList">
+      <block wx:for="{{colorList}}" wx:key='unique' wx:for-item="color">
+        <view style='background-color:{{color}};' bindtap='colorChange' data-color="{{color}}"></view>
+      </block>
+    </view>
+  </view>
+</template>
