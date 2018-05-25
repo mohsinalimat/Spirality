@@ -1,8 +1,30 @@
-<view class="stv-container">
+
+<!-- 静态数据 -->
+<wxs module="StaticData">
+  // 图片
+  var image_names = ['picker','circle',['pen','bucket'],'recyclebin',['left','arrow_left_dis'],['right','arrow_right_dis'],'save','time'];
+  // 方法名
+  var bindtap_names = ['colorChange','countChange','penChange','clean','rollBack','moveForward','save','play'];
+  module.exports = {
+    image_names : image_names,
+    bindtap_names : bindtap_names,
+  }
+</wxs>
+
+<!-- 内容展示 -->
+<view class="stv-container" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel'>
   <canvas id="canvas" canvas-id="firstCanvas"></canvas>
   <view class='tool'>
-    <block wx:for="{{['picker','circle','pen','recyclebin','arrow_left_dis','arrow_right_dis','save','time']}}">
-      <image class='tool-item' src="../image/{{item}}.png" alrt="image"></image>
+    <block wx:for="{{StaticData.image_names}}" wx:key='unique' wx:for-item="imageName">
+      <view bindtap="{{StaticData.bindtap_names[index]}}">
+        <image wx:if="{{index==2}}" class='tool-item' src="../image/{{imageName[isPen ? 0:1]}}.png" alrt="image"></image>
+        <image wx:elif="{{index==4}}" class='tool-item' src="../image/{{imageName[isAblePre ? 0:1]}}.png" alrt="image"></image>
+        <image wx:elif="{{index==5}}" class='tool-item' src="../image/{{imageName[isAbleNext ? 0:1]}}.png" alrt="image"></image>
+        <image wx:else class='tool-item' src="../image/{{imageName}}.png" alrt="image"></image>
+        <view wx:if="{{index==0}}" class='tool-item-bottom' style="background-color:{{color}};"></view>
+        <view wx:if="{{index==1}}" style="color:#aaa; font-size:20rpx;">{{count}}</view>
+        <view wx:if="{{index==2}}" style="color:#bbb; font-size:20rpx;">{{isPen ? '钢笔':'水桶'}}</view>
+      </view>
     </block>
   </view>
 </view>

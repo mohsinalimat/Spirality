@@ -21,7 +21,25 @@
   justify-content: space-around;
   background-color: #222222;
 }
+.tool>view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.tool>view:last-child {
+  padding-bottom: 40rpx;
+}
+.tool>view:first-child {
+  padding-top: 40rpx;
+}
 .tool-item {
   width: 50rpx;
   height: 50rpx;
+}
+.tool-item-bottom {
+  width: 50rpx;
+  height: 8rpx;
 }
