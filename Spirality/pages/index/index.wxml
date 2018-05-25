@@ -16,7 +16,7 @@
 
 <!-- 内容展示 -->
 <view class="stv-container" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel'>
-  <canvas id="canvas" canvas-id="firstCanvas" style="z-index=-100;"></canvas>
+  <canvas id="drawCanvas" canvas-id="firstCanvas" style="z-index=-100;"></canvas>
   <view wx:if="{{isShowTool}}" class='tool'>
     <block wx:for="{{StaticData.image_names}}" wx:key='unique' wx:for-item="imageName">
       <view bindtap="{{StaticData.bindtap_names[index]}}">
