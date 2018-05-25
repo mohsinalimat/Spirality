@@ -31,6 +31,7 @@ Page({
     if (!this.context) {
       this.context = wx.createCanvasContext("firstCanvas", this)
       this.context.setLineWidth(1)
+      this.context.setFillStyle('black');
     }
     this.context.setStrokeStyle(this.data.color)
   },
@@ -158,19 +159,34 @@ Page({
   save(e){
     console.log('save', e)
     this.dismissFocus()
+    let width = this.windowWidth;
+    let height = this.windowHeight;
 
     wx.canvasToTempFilePath({
       canvasId: 'firstCanvas',
+      x: 0,
+      y: (height-width)/2.0,
+      width: width,
+      height: width,
       success(res) {
-        console.log(res.tempFilePath);
-        console.log(res);
+        wx.showToast({
+          title: '保存成功',
+          icon: 'success',
+          duration: 2000
+        })
+        wx.setStorage({
+          key: ("image-" + res.tempFilePath),
+          data: res.tempFilePath,
+        })
       }
     }, this)
   },
   // 播放
   play(e){
     console.log('play', e)
-    this.dismissFocus()
+    wx.navigateTo({
+      url: '../history/history',
+    })
   },
 
   dismissFocus(e){

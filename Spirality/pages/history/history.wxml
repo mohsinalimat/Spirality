@@ -1,0 +1,9 @@
+<!--pages/history.wxml-->
+<view id='container'>
+  <block wx:for="{{list}}" wx:key='unique' wx:for-item="imagePath">
+    <view class='cell' bindtap='cellClick' data-image='{{imagePath}}'>
+    <image src="{{imagePath}}"/>
+    <view>{{imagePath}}</view>
+    </view>
+  </block>
+</view>

@@ -34,7 +34,14 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "history",
+					"pathName": "pages/history/history",
+					"query": ""
+				}
+			]
 		}
 	}
 }

@@ -1,0 +1,4 @@
+<!--pages/preview.wxml-->
+<view id='container'>
+  <view class='bounding-box' style='background-image: url({{image}});'></view>
+</view>

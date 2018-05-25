@@ -1,0 +1,39 @@
+/* pages/history.wxss */
+
+ page{
+  background-color: black;
+} 
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.cell {
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1rpx solid #444;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+.cell image {
+  margin: 10rpx 30rpx;
+  height: 150rpx;
+  width: 150rpx;
+}
+.cell view {
+  width: 60%;
+  color: #888;
+  font-size: 25rpx;
+  margin: 20rpx;
+  display: block;
+  word-break: break-all;
+}

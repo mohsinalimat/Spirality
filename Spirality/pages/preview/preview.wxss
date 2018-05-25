@@ -1,0 +1,23 @@
+/* pages/preview.wxss */
+ page{
+  background-color: black;
+}
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+.bounding-box {
+  background-size: contain;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
