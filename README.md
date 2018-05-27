@@ -25,5 +25,31 @@
 - [x] 播放绘画过程
 	- [ ]	停止播放
 
-微信小程序: => [Spirality](https://github.com/ZhipingYang/Spirality/tree/mini_pro)
 
+## Other Demo
+
+<p align="center">
+
+<img width=33% src="https://user-images.githubusercontent.com/9360037/40588552-985a12de-6211-11e8-8c39-d88d0cf9c469.jpeg">
+
+<img width=33% src="https://user-images.githubusercontent.com/9360037/40588549-96eb5d0e-6211-11e8-8d05-170f8abe5c04.jpeg">
+
+<img width=33% src="https://user-images.githubusercontent.com/9360037/40588551-978cfaf6-6211-11e8-9cf8-e59b230d86d0.jpeg">
+
+<img width=33% src="https://user-images.githubusercontent.com/9360037/40588548-969baf34-6211-11e8-8e8e-906f1c78e04d.jpeg">
+
+<img width=33% src="https://user-images.githubusercontent.com/9360037/40588546-9556a516-6211-11e8-8cc4-c78392b02522.jpeg">
+
+<img width=33% src="https://user-images.githubusercontent.com/9360037/40588547-95b92c2c-6211-11e8-9206-eb9ba4d14ba7.jpeg">
+
+</p>
+
+### 微信小程序: => [Spirality](https://github.com/ZhipingYang/Spirality/tree/mini_pro)
+
+## Author
+
+XcodeYang, xcodeyang@gmail.com
+
+## License
+
+XYDebugView is available under the MIT license. See the LICENSE file for more info.
