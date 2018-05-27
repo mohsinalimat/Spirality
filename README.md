@@ -2,6 +2,11 @@
 > Create beautiful drawings reminiscent of old Spirograph toys. Draw, color and write to create one-of-a-kind decorations, invitations and doodles. Watch pleasing colors and shapes flow from your pen and mouse - you'll feel like a true artist.
 >
 > 启发于微软平台的 [Spirality](https://www.microsoft.com/en-us/store/p/spirality/9pgtlzjj1rs6)。由于它的魔性，用来模仿探索画笔记录、橡皮擦、历史播放等等功能。
+>
+> 🔗 [In Swift](https://github.com/ZhipingYang/Spirality)
+> 
+> 🔗 [AppStore](https://itunes.apple.com/us/app/spirality/id1318807907)
+
 
 ### ScreenShot
 
