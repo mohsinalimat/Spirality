@@ -30,7 +30,7 @@ Page({
     this.prePointY = clientY;
     if (!this.context) {
       this.context = wx.createCanvasContext("firstCanvas", this)
-      this.context.setLineWidth(1)
+      this.context.setLineWidth(0.5)
       this.context.setFillStyle('black');
     }
     this.context.setStrokeStyle(this.data.color)

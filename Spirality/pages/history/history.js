@@ -1,6 +1,7 @@
 // pages/history.js
-Page({
+var isLongTap = false;
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -37,9 +38,35 @@ Page({
   },
 
   cellClick(e){
+    if (isLongTap) {
+      isLongTap = false;
+      return;
+    }
     let image = e.currentTarget.dataset.image;
     wx.navigateTo({
       url: `../preview/preview?image=${image}`,
+    })
+  },
+
+  deleteImage(e){
+    isLongTap = true;
+    let image = e.currentTarget.dataset.image;
+    console.log("deleteImage:", image)
+
+    wx.showModal({
+      title: '删除图片',
+      confirmText:'删除',
+      success(res){
+        if (res.confirm) {
+          // 删除
+          wx.removeSavedFile({
+            filePath: image,
+            complete(res) {
+              console.log(res);
+            }
+          })
+        }
+      }
     })
   },
 

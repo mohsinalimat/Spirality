@@ -13,11 +13,8 @@
   align-items: center;
   background-color: black;
 }
-.bounding-box {
-  background-size: contain;
+image {
   position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
 }

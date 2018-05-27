@@ -1,9 +1,9 @@
 <!--pages/history.wxml-->
-<view id='container'>
+<scroll-view id='container' scroll-y>
   <block wx:for="{{list}}" wx:key='unique' wx:for-item="imagePath">
-    <view class='cell' bindtap='cellClick' data-image='{{imagePath}}'>
-    <image src="{{imagePath}}"/>
+    <view class='cell' catchlongtap='deleteImage' catchtap='cellClick' data-image='{{imagePath}}'>
+    <image src="{{imagePath}}" mode='aspectFit'/>
     <view>{{imagePath}}</view>
     </view>
   </block>
-</view>
+</scroll-view>
