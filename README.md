@@ -1,6 +1,9 @@
-![banner](https://user-images.githubusercontent.com/9360037/40588027-fddd37ce-6209-11e8-9656-768b9390f2e5.jpg)
+
+![banner](https://user-images.githubusercontent.com/9360037/40588778-8121f6be-6215-11e8-929f-836eec86f90f.jpg)
 
 ## Spirality - 螺旋绘画
+> Create beautiful drawings reminiscent of old Spirograph toys. Draw, color and write to create one-of-a-kind decorations, invitations and doodles. Watch pleasing colors and shapes flow from your pen and mouse - you'll feel like a true artist.
+>
 > 启发于微软平台的 [Spirality](https://www.microsoft.com/en-us/store/p/spirality/9pgtlzjj1rs6)。由于它的魔性，用来模仿探索画笔记录、橡皮擦、历史播放等等功能。
 
 ### ScreenShot
@@ -44,7 +47,7 @@
 
 </p>
 
-### 微信小程序: => [Spirality](https://github.com/ZhipingYang/Spirality/tree/mini_pro)
+### 微信小程序: => [Spirality.mini_pro](https://github.com/ZhipingYang/Spirality/tree/mini_pro)
 
 ## Author
 
