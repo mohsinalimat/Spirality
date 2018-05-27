@@ -18,10 +18,6 @@ class ViewController: UIViewController {
         return true
     }
     
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        return UIInterfaceOrientationMask.landscape
-//    }
-    
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return UIInterfaceOrientation.landscapeLeft
     }

@@ -113,7 +113,7 @@ extension OverlayerView {
     }
     
     @IBAction func saveToAlbumAction(_ sender: UIButton) {
-        guard let delegate = delegate else { return }
+        guard let delegate = delegate, delegate.stack.showingHistoryRecords.count>0 else { return }
         UIImageWriteToSavedPhotosAlbum(delegate.screenshotImage(), self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
