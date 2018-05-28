@@ -193,8 +193,12 @@ extension SpiralityCanvas {
     }
     
     func cleanAll() {
-        UserDefaults.standard.set(true, forKey: FirstPreLoadImageKey);
-        UserDefaults.standard.synchronize()
+        if !UserDefaults.standard.bool(forKey: FirstPreLoadImageKey) {
+            UserDefaults.standard.set(true, forKey: FirstPreLoadImageKey);
+            UserDefaults.standard.synchronize()
+            imageLayer?.removeFromSuperlayer()
+            imageLayer = nil;
+        }
         
         stack.clean()
         prepareNewLayers()

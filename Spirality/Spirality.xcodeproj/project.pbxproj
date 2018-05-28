@@ -16,6 +16,7 @@
 		659EB8D01FC5E41B009078AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659EB8CF1FC5E41B009078AA /* Assets.xcassets */; };
 		659EB8D31FC5E41B009078AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659EB8D11FC5E41B009078AA /* LaunchScreen.storyboard */; };
 		659EB8DB1FC5E493009078AA /* SpiralityCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659EB8DA1FC5E493009078AA /* SpiralityCanvas.swift */; };
+		65D14B3620BBF9E200FDAF5D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 65D14B3520BBF9E200FDAF5D /* README.md */; };
 		65EDBADE1FDB8B0F0064A565 /* SpiralityStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EDBADD1FDB8B0F0064A565 /* SpiralityStack.swift */; };
 		65FF243F20BB07BA0086BF8D /* SpiralityDrawingLanuch.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FF243E20BB07B90086BF8D /* SpiralityDrawingLanuch.png */; };
 		94505D4AB0C7E0CE2FA1FCBD /* Pods_Spirality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0032163B35E22A151E77B2 /* Pods_Spirality.framework */; };
@@ -35,6 +36,7 @@
 		659EB8D21FC5E41B009078AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		659EB8D41FC5E41B009078AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659EB8DA1FC5E493009078AA /* SpiralityCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralityCanvas.swift; sourceTree = "<group>"; };
+		65D14B3520BBF9E200FDAF5D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		65EDBADD1FDB8B0F0064A565 /* SpiralityStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiralityStack.swift; sourceTree = "<group>"; };
 		65FF243E20BB07B90086BF8D /* SpiralityDrawingLanuch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpiralityDrawingLanuch.png; sourceTree = "<group>"; };
 		84C0AECFFEB0DBDB8EFCD2FA /* Pods-Spirality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spirality.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spirality/Pods-Spirality.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		659EB8BC1FC5E41B009078AA = {
 			isa = PBXGroup;
 			children = (
+				65D14B3520BBF9E200FDAF5D /* README.md */,
 				659EB8C71FC5E41B009078AA /* Spirality */,
 				659EB8C61FC5E41B009078AA /* Products */,
 				E58DE6E89CF7F2D0B508A65B /* Pods */,
@@ -171,6 +174,7 @@
 				659EB8D31FC5E41B009078AA /* LaunchScreen.storyboard in Resources */,
 				659EB8D01FC5E41B009078AA /* Assets.xcassets in Resources */,
 				659EB8CE1FC5E41B009078AA /* Main.storyboard in Resources */,
+				65D14B3620BBF9E200FDAF5D /* README.md in Resources */,
 				65FF243F20BB07BA0086BF8D /* SpiralityDrawingLanuch.png in Resources */,
 				652B58891FCC4DE2002670EE /* OverlayerView.xib in Resources */,
 				652B58931FCF142D002670EE /* default_load.jpeg in Resources */,

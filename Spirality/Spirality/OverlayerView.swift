@@ -66,7 +66,7 @@ class OverlayerView: UIView {
     
     override func layoutSubviews() {
         colorPicker.center = CGPoint(x: frame.width/2.0, y: frame.height/2.0)
-        let rect = spiralityBtn.superview!.convert(spiralityBtn.frame, to: UIApplication.shared.delegate?.window!)
+        let rect = spiralityBtn.convert(spiralityBtn.bounds, to: self)
         slider.frame = CGRect.init(x: rect.maxX+4, y: rect.midY - 30/2.0, width: 200, height: 30)
         slider.layer.cornerRadius = 15;
         if UIScreen.main.nativeBounds.height == 2436 && frame.width>frame.height {
@@ -74,7 +74,6 @@ class OverlayerView: UIView {
         } else {
             leadingConstraint.constant = 0;
         }
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -129,7 +128,7 @@ extension OverlayerView {
         }
     }
     
-    @IBAction func settingAction(_ sender: UIButton) {
+    @IBAction func playAction(_ sender: UIButton) {
         delegate?.play()
     }
 }
